@@ -13,7 +13,7 @@ export class TodosService {
   ) {}
 
   async create(createTodoDto: CreateTodoDto): Promise<Todo> {
-    return this.todoRepository.create(createTodoDto);
+    return this.todoRepository.save(createTodoDto);
   }
 
   async findAll(): Promise<Todo[]> {
