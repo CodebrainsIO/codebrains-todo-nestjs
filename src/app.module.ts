@@ -9,12 +9,11 @@ import { TodosModule } from './todos/todos.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '0.0.0.0',
+      host: 'localhost',
       port: 5432,
-      username: 'codebrains',
+      username: 'postgres',
       password: 'codebrains',
       database: 'codebrains',
-      schema: 'nest_todo',
       entities: [Todo],
       synchronize: true,
     }),
